@@ -1,0 +1,45 @@
+Feature: OrangeHRM logo
+    Scenario: Logo presemce on homepage
+     Given Launch chrome browser
+     When Open orangeHRM homePAge
+     Then Verify that Logo presence on homepage
+     And close browser
+
+    Scenario Outline: Login to HRM with multiple parameter      #scenario outline will take multiple user ip from given gherkin keyword
+     Given Launch chrome browser
+     When Open orangeHRM homePAge
+     And enter username "<username>" and password "<password>"
+     And click on login button
+     Then user must login to dashboard page
+
+     Examples:
+     | username | password |
+     | admin    | admin123 |
+     | admin123 | admin    |
+     | admin    | adminxyz |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
